@@ -1,4 +1,3 @@
-let state = 0
 input.onButtonPressed(Button.A, function () {
     state = 1
     basic.showString("ON")
@@ -48,6 +47,8 @@ input.onButtonPressed(Button.B, function () {
     state = 0
     basic.showString("OFF")
 })
+let state = 0
+basic.showString("A to start, B to stop")
 basic.forever(function () {
     if (state) {
         if (input.lightLevel() <= 150) {
