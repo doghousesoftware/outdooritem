@@ -53,14 +53,11 @@ basic.forever(function () {
     if (state) {
         if (input.lightLevel() <= 150) {
             blinker(1)
-        }
-        if (input.lightLevel() <= 90) {
+        } else if (input.lightLevel() <= 90) {
             blinker(2)
-        }
-        if (input.lightLevel() <= 60) {
+        } else if (input.lightLevel() <= 60) {
             blinker(3)
-        }
-        if (input.lightLevel() <= 30) {
+        } else {
             blinker(4)
         }
     }
